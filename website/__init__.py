@@ -1,8 +1,8 @@
 from flask import Flask
-import config_file
+import website.config as config
 
 def create_app():
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = config_file.secret_key
+    app.config['SECRET_KEY'] = config.secret_key
 
     return app
