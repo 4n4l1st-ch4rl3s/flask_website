@@ -24,7 +24,7 @@ def login():
         else:
             flash("Invalid email or password", category='error')
 
-    return render_template('login.html')
+    return render_template('login.html', user=current_user)
 
 @auth.route('/logout')
 @login_required
@@ -61,4 +61,4 @@ def sign_up():
             flash("You have successfully created a new user", category="success")
             return redirect(url_for('views.home'))
 
-    return render_template('sign_up.html')
+    return render_template('sign_up.html', user=current_user)
