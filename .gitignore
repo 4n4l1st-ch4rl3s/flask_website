@@ -1,4 +1,4 @@
 /website/config.py
 /website/database.db
 /instance/database.db
-/website/__pycache__
+/website/__pycache__/*
